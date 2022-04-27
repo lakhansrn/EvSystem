@@ -1,5 +1,8 @@
+using Newtonsoft.Json;
+
 public class Organizer{
-    public int OrganizerId { get; set; }
+     [JsonProperty(PropertyName = "id")]
+    public Guid OrganizerId { get; set; }
 
     public string? Email { get; set; }
     public string? FirstName { get; set; }

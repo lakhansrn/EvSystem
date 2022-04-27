@@ -1,5 +1,5 @@
 public class Poll{
-    public int PollId { get; set; }
+    public Guid PollId { get; set; }
     public string? Title { get; set; }
 
     public DateTime StartDate { get; set; }
