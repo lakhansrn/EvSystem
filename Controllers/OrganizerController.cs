@@ -9,9 +9,9 @@ public OrganizerController(IGeneralRepo repo)
 {
     this.repo = repo;
 }
-[HttpGet("GetOrganizer")]
+
+[HttpGet]
 public async Task<ActionResult<IEnumerable<Organizer>>> GetOrganizers(){
-    // IEnumerable<Organizer> organizers=null;
     var results = await repo.GetOrganizersAsync();
     return CreatedAtAction(nameof(GetOrganizers), results);
 }
